@@ -1,1 +1,1 @@
-web: uvicorn main:app --reload --port {PORT}
+web: gunicorn --keyfile=./key.pem --certfile=./cert.pem -k uvicorn.workers.UvicornWorker main:app

@@ -1,1 +1,1 @@
-web: gunicorn --keyfile=./key.pem --certfile=./cert.pem -k uvicorn.workers.UvicornWorker main:app
+web: gunicorn -w 4 -k uvicorn.workers.UvicronWorker main:app
